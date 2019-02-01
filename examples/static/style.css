@@ -1,0 +1,460 @@
+ #custom-search-input {
+  background: #e8e6e7 none repeat scroll 0 0;
+  margin: 0;
+  padding: 10px;
+}
+   #custom-search-input .search-query {
+   background: #fff none repeat scroll 0 0 !important;
+   border-radius: 4px;
+   height: 33px;
+   margin-bottom: 0;
+   padding-left: 7px;
+   padding-right: 7px;
+   }
+   #custom-search-input button {
+   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+   border: 0 none;
+   border-radius: 3px;
+   color: #666666;
+   left: auto;
+   margin-bottom: 0;
+   margin-top: 7px;
+   padding: 2px 5px;
+   position: absolute;
+   right: 0;
+   z-index: 9999;
+   }
+   .search-query:focus + button {
+   z-index: 3;   
+   }
+   .all_conversation button {
+   background: #f5f3f3 none repeat scroll 0 0;
+   border: 1px solid #dddddd;
+   height: 38px;
+   text-align: left;
+   width: 100%;
+   }
+   .all_conversation i {
+   background: #e9e7e8 none repeat scroll 0 0;
+   border-radius: 100px;
+   color: #636363;
+   font-size: 17px;
+   height: 30px;
+   line-height: 30px;
+   text-align: center;
+   width: 30px;
+   }
+   .all_conversation .caret {
+   bottom: 0;
+   margin: auto;
+   position: absolute;
+   right: 15px;
+   top: 0;
+   }
+   .all_conversation .dropdown-menu {
+   background: #f5f3f3 none repeat scroll 0 0;
+   border-radius: 0;
+   margin-top: 0;
+   padding: 0;
+   width: 100%;
+   }
+   .all_conversation ul li {
+   border-bottom: 1px solid #dddddd;
+   line-height: normal;
+   width: 100%;
+   }
+   .all_conversation ul li a:hover {
+   background: #dddddd none repeat scroll 0 0;
+   color:#333;
+   }
+   .all_conversation ul li a {
+  color: #333;
+  line-height: 30px;
+  padding: 3px 20px;
+}
+   .member_list .chat-body {
+   margin-left: 47px;
+   margin-top: 0;
+   }
+   .top_nav {
+   overflow: visible;
+   }
+   .member_list .contact_sec {
+   margin-top: 3px;
+   }
+   .member_list li {
+   padding: 6px;
+   }
+   .member_list ul {
+   border: 1px solid #dddddd;
+   }
+   .chat-img img {
+   height: 34px;
+   width: 34px;
+   }
+   .member_list li {
+   border-bottom: 1px solid #dddddd;
+   padding: 6px;
+   }
+   .member_list li:last-child {
+   border-bottom:none;
+   }
+   .member_list {
+   height: 380px;
+   overflow-x: hidden;
+   overflow-y: auto;
+   }
+   .sub_menu_ {
+  background: #e8e6e7 none repeat scroll 0 0;
+  left: 100%;
+  max-width: 233px;
+  position: absolute;
+  width: 100%;
+}
+.sub_menu_ {
+  background: #f5f3f3 none repeat scroll 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  display: none;
+  left: 100%;
+  margin-left: 0;
+  max-width: 233px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.all_conversation ul li:hover .sub_menu_ {
+  display: block;
+}
+.new_message_head button {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+}
+.new_message_head {
+  background: #f5f3f3 none repeat scroll 0 0;
+  float: left;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 18px 10px;
+  width: 100%;
+}
+.message_section {
+  border: 1px solid #dddddd;
+}
+.chat_area {
+  float: left;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+.chat_area li {
+  padding: 14px 14px 0;
+}
+.chat_area li .chat-img1 img {
+  height: 40px;
+  width: 40px;
+}
+.chat_area .chat-body1 {
+  margin-left: 50px;
+}
+.chat-body1 p {
+  background: #fbf9fa none repeat scroll 0 0;
+  padding: 10px;
+}
+.chat_area .admin_chat .chat-body1 {
+  margin-left: 0;
+  margin-right: 50px;
+}
+.chat_area li:last-child {
+  padding-bottom: 10px;
+}
+.message_write {
+  background: #f5f3f3 none repeat scroll 0 0;
+  float: left;
+  padding: 15px;
+  width: 100%;
+}
+
+.message_write textarea.form-control {
+  height: 70px;
+  padding: 10px;
+}
+.chat_bottom {
+  float: left;
+  margin-top: 13px;
+  width: 100%;
+}
+.upload_btn {
+  color: #777777;
+}
+.sub_menu_ > li a, .sub_menu_ > li {
+  float: left;
+  width:100%;
+}
+.member_list li:hover {
+  background: #428bca none repeat scroll 0 0;
+  color: #fff;
+  cursor:pointer;
+}
+
+/* BASIC */
+
+html {
+  background-color: #56baed;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+a {
+  color: #92badd;
+  display:inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  color: #cccccc;
+}
+
+
+
+/* STRUCTURE */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+#formFooter {
+  background-color: #f6f6f6;
+  border-top: 1px solid #dce8f1;
+  padding: 25px;
+  text-align: center;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+
+
+/* TABS */
+
+h2.inactive {
+  color: #cccccc;
+}
+
+h2.active {
+  color: #0d0d0d;
+  border-bottom: 2px solid #5fbae9;
+}
+
+
+
+/* FORM TYPOGRAPHY*/
+
+input[type=button], input[type=submit], input[type=reset]  {
+  background-color: #56baed;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+  background-color: #39ace7;
+}
+
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+input[type=text] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+input[type=text]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
+}
+
+input[type=text]:placeholder {
+  color: #cccccc;
+}
+
+
+
+/* ANIMATIONS */
+
+/* Simple CSS3 Fade-in-down Animation */
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fadeIn {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fadeIn.first {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.fadeIn.second {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.fadeIn.third {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.fadeIn.fourth {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+/* Simple CSS3 Fade-in Animation */
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #56baed;
+  content: "";
+  transition: width 0.2s;
+}
+
+.underlineHover:hover {
+  color: #0d0d0d;
+}
+
+.underlineHover:hover:after{
+  width: 100%;
+}
+
+
+
+/* OTHERS */
+
+*:focus {
+    outline: none;
+} 
+
+#icon {
+  width:60%;
+}
