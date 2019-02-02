@@ -5,7 +5,7 @@ Author : Jean-Philippe Beaudet
 version : 1.0.0
 
 """
-# imports
+# imports 
 import os
 from flask import Flask, request, json, url_for, render_template, redirect
 from config import client #pymongo client
@@ -54,6 +54,12 @@ def create_app(test_config=None):
     @app.route('/test', methods=['GET'])
     @a.secure
     def test():
+        print("test origin: "+a.current_user().origin)
+        return "success", 200
+
+    @app.route('/test2', methods=['GET'])
+    @a.has_role(roles =['user'])
+    def test2():
         print("test origin: "+a.current_user().origin)
         return "success", 200
 		  

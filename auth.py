@@ -154,9 +154,9 @@ class Auth(object):
 		user.origin = self.digest(str(get_mac()))
 		query = self.session[self.digest(str(get_mac()))]	
 		if query is not None:
-			records_fetched = self.users.find({"origin": query})
+			records_fetched = self.users.find({"origin": str(get_mac())})
 			if records_fetched.count() > 0:
-				user.user.update(list(records_fetched))
+				user.user = list(records_fetched)
 				user.isLoggedIn = True
 				return user
 			else:
@@ -233,8 +233,28 @@ class Auth(object):
 				return redirect(url_for(self.redirect, next=request.url))
 			else:
 				return f(*args, **kwargs)
-		return decorated_function		
-
+		return decorated_function
+		
+	def has_role(self, roles):
+		def wrap(f):
+			print("Inside wrap()")
+			def wrapped_f(*args, **kwargs):
+				# if not loggedIN redirect to login
+				if not self.is_logged_in():
+					return redirect(url_for(self.redirect, next=request.url))
+				else:
+					if roles and isinstance(roles,(list,)):
+						print(self.current_user().user[0]["username"])
+						username = self.current_user().user[0]["username"]
+						user_record = self.users.find({"username":username})
+						for x in roles:
+							if x == list(user_record)[0]["role"]:						
+								return f(*args, **kwargs)
+							else:
+								return redirect(url_for(self.redirect, next=request.url))
+			return wrapped_f
+		return wrap	
+		
 class User(object):
 	'''
 	class to create user object
