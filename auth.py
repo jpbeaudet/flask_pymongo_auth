@@ -240,6 +240,7 @@ class Auth(object):
 			print("Inside wrap()")
 			def wrapped_f(*args, **kwargs):
 				# if not loggedIN redirect to login
+				success = False
 				if not self.is_logged_in():
 					return redirect(url_for(self.redirect, next=request.url))
 				else:
@@ -248,10 +249,14 @@ class Auth(object):
 						username = self.current_user().user[0]["username"]
 						user_record = self.users.find({"username":username})
 						for x in roles:
-							if x == list(user_record)[0]["role"]:						
-								return f(*args, **kwargs)
+							if x == list(user_record)[0]["role"]:
+								success = True														
 							else:
-								return redirect(url_for(self.redirect, next=request.url))
+								pass								
+						if success:
+							return f(*args, **kwargs)
+						else:
+							return redirect(url_for(self.redirect, next=request.url))
 			return wrapped_f
 		return wrap	
 		
